@@ -1,59 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<body>
-		<?php
-        
-        
-        print "<h2>PHP é foda! Funções (Básico)</h2>";
-		//Variaveis Globais e Locais, servem para todo o código.
-		$x = 5; // global scope 
-			function teste() {
-				$x = 10; //Local scope
-				// *Variavéis Locais - Porém, se eu declara uma váriavel dentro da função, ela será a padrão a ser utilizada.
-				echo "<p>Variável x tem como valor de saída, o valor Local: $x</p>";
-			} 
-			teste();
-			echo "<p>Variável x tem como valor de saída, o valor Global: $x</p>";
-		?>
- 		<?php
-		$x = 50;
-		$y = 100;
-			function teste2() {
-				global $x, $y; //Puxando a variáveis globais
-				$y = $x + $y;
-			}
-			teste2();
-			echo "$y</p>"; // A saída deverá ser 150
-		?>
-		<?php
-		$x = 300;
-		$y = 1000;
-		//Puxando as variáveis globais diretamente na operação
-			function teste3() {
-				$GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y'];
-			}
-			teste3();
-			echo "$y</p>"; // A saída deverá ser 1500
-		?>
-        <?php
-        	teste();
-			echo "$y</p>";	//Da forma que coloquei puxa os ultimos valores atribuidos as variáveis.		
-            teste2();
-			echo "$y</p>";
-            teste3();
-            echo "$y</p>";
-        ?>
-		<?php
-			function myTest() {
-				static $x = 0;
-				echo $x;
-				$x++;
-			}
-			myTest();
-			myTest();
-			myTest();
-		?>
-        <?php
+	<?php
         $t = "Testes";
         $w = "Posso declarar";
         $x = 27;
@@ -208,5 +156,55 @@
 			      $int_cast = (int)$x;
 			   echo $int_cast;
       ?>
+      <?php         
+       		 print "<h2>Funções</h2>";
+		//Variaveis Globais e Locais, servem para todo o código.
+		$x = 5; // global scope 
+			function teste() {
+				$x = 10; //Local scope
+				// *Variavéis Locais - Porém, se eu declara uma váriavel dentro da função, ela será a padrão a ser utilizada.
+				echo "<p>Variável x tem como valor de saída, o valor Local: $x</p>";
+			} 
+			teste();
+			echo "<p>Variável x tem como valor de saída, o valor Global: $x</p>";
+		?>
+ 		<?php
+		$x = 50;
+		$y = 100;
+			function teste2() {
+				global $x, $y; //Puxando a variáveis globais
+				$y = $x + $y;
+			}
+			teste2();
+			echo "$y</p>"; // A saída deverá ser 150
+		?>
+		<?php
+		$x = 300;
+		$y = 1000;
+		//Puxando as variáveis globais diretamente na operação
+			function teste3() {
+				$GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y'];
+			}
+			teste3();
+			echo "$y</p>"; // A saída deverá ser 1500
+		?>
+        <?php
+        	teste();
+			echo "$y</p>";	//Da forma que coloquei puxa os ultimos valores atribuidos as variáveis.		
+            teste2();
+			echo "$y</p>";
+            teste3();
+            echo "$y</p>";
+        ?>
+		<?php
+			function myTest() {
+				static $x = 0;
+				echo $x;
+				$x++;
+			}
+			myTest();
+			myTest();
+			myTest();
+		?>
 	</body>
 </html>
