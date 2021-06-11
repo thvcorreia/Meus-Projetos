@@ -6,9 +6,7 @@
         $w = "Posso declarar";
         $x = 27;
         $y = 5;
-        $f = "Maio";
-        
-        
+        $f = "Maio";       
 			echo "<h2>Utilizando o ECHO</h2>";
             
 			echo "Olá Brsail<br>";
